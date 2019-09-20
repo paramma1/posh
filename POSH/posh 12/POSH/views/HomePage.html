@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>POSH - Home</title>
+    <link rel="stylesheet" type="text/css" href="../css/posh.css">
+    <link rel="stylesheet" type="text/css" href="../css/posh-mobile.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="../ui/posh.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body style="background: #F6F8F9">
+    <div class="my_class">
+        <header class="header-container">
+            <div class="header-left-container">
+                <img src="../images/posh-icons-15.png" alt="" class="burger-menu" style="margin-right:5%">
+                <span class="posh-head-title">POSH</span>
+            </div>
+            <div class="header-right-container">
+                <div style="text-align:end;">
+                    <img src="../images/posh-icons-08.png" alt="" height="30%" width="8%" class="notification-icon-header">
+                    <img src="../images/profile.png" class="profile-image" alt="" height="18%" width="8%">
+                    <span class="profile-name ">Lucy Carter</span>
+                    <img src="../images/down-arrow-image.png" alt="" class="image-down-icon image-dropdown-icon">
+                </div>
+            </div>
+        </header>
+
+        <div class="top-container">
+            <div id="myCarousel" class="carousel">
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="mySlides timeslides">
+                            <div class="numbertext">1 / 4</div>
+                            <img src="../images/carousel-04.png" alt="Los Angeles" width="1100" height="200">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="mySlides timeslides">
+                            <div class="numbertext">2 / 4</div>
+                            <img src="../images/carousel-03.png" alt="Chicago" width="1100" height="200">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="mySlides timeslides">
+                            <div class="numbertext">3 / 4</div>
+                            <img src="../images/carousel-02.png" alt="New York" width="1100" height="200">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="mySlides  timeslides">
+                            <div class="numbertext">4 / 4</div>
+                            <img src="../images/carousel-01.png" alt="New York" width="1100" height="200">
+                        </div>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="carousel-control-prev" href="#myCarousel">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#myCarousel">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-quote-over-image-container">
+                <div style="text-align:center">
+                    <span onclick="currentSlide(1)"></span>
+                    <span onclick="currentSlide(2)"></span>
+                    <span onclick="currentSlide(3)"></span>
+                    <span onclick="currentSlide(4)"></span>
+                </div>
+                <!-- </div> -->
+                <div class="officer-quote-container">
+                    <div class="flex-container">
+                        <img src="../images/profile.png" alt="" class="quote-profile-image">
+                        <div class="flex-container-column">
+                            <span class="quote-title"><b>PREVENTION OF SEXUAL HARASSMENT AT WORKPLACE</b></span>
+                            <p class="quote">Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit. Mauris mattis, tortor sit amet tempor vehicula,
+                                tortor ipsum faucibus nunc, id aliquam lacus odio nec.
+
+                                <span class=" quote para-hide"> magna Cras a ipsum placerat, efficitur nibh
+                                    sed, iaculis elit. Mauris semper tempor facilisis.Nunc at consequat tortor, vel
+                                    facilisis
+                                    tortor.
+                                    Morbi blandit, libero id pellentesque faucibus, eros leo consequat erat, a gravida
+                                    elit enim
+                                    vitae
+                                    tellus. Sed mattis nulla ut nulla hendrerit porta in quis orci.</span></p>
+                            <p class="quote-writer-name">Ashima Mukharjee</p>
+                            <p class="quote-writer-name">Chief Operating Officer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-container">
+            <div class="training-container">
+                <div class="training-title-container">
+                    <span class="training-text">TRAINING</span>
+                    <p class="training-desc-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+                        mattis, tortor sit amet tempor vehicula.</p>
+                </div>
+                <div class="background box-shadow training-schedule-container">
+                    <div class="training-error-container cursor" id="failed" onclick="importantmess()">
+                        <div style="padding:3%;padding-bottom: 2%;padding-top: 2%">
+                            <span class="failed-text">Important!</span>
+                            <p class="failed-desc-text">You have not completed any certification.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Mauris mattis, tortor sit amet tempor vehicula. </p>
+                        </div>
+                    </div>
+
+                    <div class="training-success-container cursor hide" id="success">
+                        <div style="padding:3%">
+                            <span class="failed-text">Congratulations!</span>
+                            <p class="failed-desc-text">You have successfully completed and earned certificate(s). View
+                                your certificate(s) here. Your latest certificate is 3 months 12 days old. </p>
+                        </div>
+                    </div>
+                    <div class="schedule-conatiner">
+                        <div class="training-enrolled flex-container space-between web">
+                            <div class="training-desc-col-1">
+                                <span class="training-date">04-Apr-2019</span>
+                                <div class="training-status-notification ">
+                                    <img src="../images/posh-icons-27.png" class="bell-icon" alt="" />&nbsp;&nbsp;
+                                    <span class="status-text">You are enrolled</span>
+                                </div>
+                            </div>
+                            <span class="training-desc-col-2 ">Pinnacle, St. Marks Road</span>
+                            <div class="training-desc-col-3">
+                                <span class="workshop-txt ">Refresher Workshop</span>
+                                <span class="trainer-name "><b>Dr. Shashi Kad</b></span>
+                            </div>
+                        </div>
+
+                        <div class="training-enrolled flex-container space-between schedule">
+                            <div class="training-desc-col-1">
+                                <span class="training-date">04-Apr-2019</span>
+                                <span class="training-desc-col-2 ">Pinnacle, St. Marks Road</span>
+                                <span class="workshop-txt ">Refresher Workshop</span>
+                                <span class="trainer-name "><b>Dr. Shashi Kad</b></span>
+                            </div>
+                            <div class="training-desc-col-3">
+                                <img src="../images/posh-icons-27.png" class="bell-icon" alt="" />
+                                <span class="status-text ">You are enrolled</span>
+                            </div>
+                        </div>
+
+                        <div class="training-missed flex-container space-between show ">
+                            <div class="training-desc-col-1">
+                                <span class="training-date light-color">12 Jul 2018</span>
+
+                                <div class="training-status-notification ">
+                                    <img src="../images/posh-icons-11.png" class="minus-icon" alt="" />&nbsp;&nbsp;
+                                    <span class="status-text light-color">We Missed You</span>
+                                </div>
+                            </div>
+                            <span class="training-desc-col-2 light-color ">Online</span>
+                            <div class="training-desc-col-3 ">
+                                <span class="workshop-txt light-color ">Refresher Workshop </span>
+                                <span class="trainer-name light-color ">Dr. Shashi Kad</span>
+                            </div>
+                        </div>
+
+                        <div class="training-missed flex-container space-between schedule">
+                            <div class="training-desc-col-1">
+                                <span class="training-date light-color">12 Jul 2018</span>
+                                <span class="training-desc-col-2 light-color ">Online</span>
+                                <span class="workshop-txt light-color ">Refresher Workshop</span>
+                                <span class="trainer-name light-color ">Dr. Shashi Kad</span>
+                            </div>
+
+                            <div class="training-desc-col-3 ">
+                                <img src="../images/posh-icons-11.png" class="minus-icon" alt="" />
+                                <span class="status-text light-color ">We Missed You</span>
+                            </div>
+                        </div>
+
+                        <div class="training-certificate flex-container space-between show">
+                            <div class="training-desc-col-1">
+                                <span class="training-date light-color">03 Mar 2018</span>
+                                <div class="training-status-notification ">
+                                    <img src="../images/posh-icons-10.png" class="right-icon" alt="" />&nbsp;&nbsp;
+                                    <span class="view-cerificate cursor" id="view-certificate" onclick="turnon()">View
+                                        Certificate</span>
+                                </div>
+                            </div>
+                            <span class="training-desc-col-2 light-color ">Pinnacle, St. Marks Road</span>
+                            <div class="training-desc-col-3">
+                                <span class="workshop-txt light-color ">Refresher Workshop</span>
+                                <span class="trainer-name light-color ">Dr.Shashi Kad</span>
+                            </div>
+                        </div>
+
+                        <div class="training-certificate flex-container space-between schedule">
+                            <div class="training-desc-col-1" id="schedule">
+                                <span class="training-date light-color">03 Mar 2018</span>
+                                <span class="training-desc-col-2 light-color ">Pinnacle, St. Marks Road</span>
+                                <span class="workshop-txt light-color ">Refresher Workshop</span>
+                                <span class="trainer-name light-color ">Dr.Shashi Kad</span>
+                            </div>
+                            <span class="training-desc-col-2 light-color para-hide">Pinnacle, St. Marks Road</span>
+                            <div class="training-desc-col-3">
+                                <img src="../images/posh-icons-10.png" class="right-icon" alt="" />
+                                <span class="view-cerificate cursor " id="view-certificate" onclick="turnon()">View
+                                    Certificate</span>
+                            </div>
+                        </div>
+
+                        <div id="certificate" class="certificate-modal" onclick="turnoff()">
+                            <div class="certificate-modal-body">
+                                <div style="display:flex;align-items:center;justify-content:flex-start;">
+                                    <img src="../images/posh-icons-28.png" height="100%" width="19%" alt="" class="image-border " />
+                                    <div style="display:flex;flex-direction:column;margin-left: 3%">
+                                        <span class="certificate-txt">CERTIFICATE </span>
+                                        <span class="attendence-txt"> OF ATTENDANCE</span>
+                                    </div>
+                                </div>
+
+                                <div class="certificate-desc-container">
+                                    <div class="certificate-content">
+                                        <span class="content-col-1">NAME</span>
+                                        <span class="content-col-2">Ronald Philip</span>
+                                    </div>
+
+                                    <div class="certificate-content">
+                                        <span class="content-col-1">COURSE</span>
+                                        <span class="content-col-2">Prevention of Harassment @ Workplace</span>
+                                    </div>
+
+                                    <div class="certificate-content">
+                                        <span class="content-col-1 col-date-label">DATE</span>
+                                        <span class="col-date">03 Apr 2019</span>
+                                        <span class="content-col-1 col-venue-label">VENUE</span>
+                                        <span class="col-venue">Online</span>
+                                    </div>
+
+                                    <div class="certificate-content">
+                                        <span class="content-col-1">TRAINER</span>
+                                        <span class="content-col-2">Dr. Shashi Kad</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-contact-container">
+                <div class="faq-container box-shadow">
+                    <div class="border-bottom faq-container-div">
+                        <span class="faq-text">FAQ</span>
+                        <div class="expolre-text-container">
+                            <a href="../views/explore-faqs.html" style="text-decoration: none; color:black;display: flex;flex-direction:row;justify-content:  flex-end;align-items: center">
+                                <span class="explore-text">EXPLORE</span>
+                                <img src="../images/posh-icons-14.png" class="explore-btn">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-div">
+                        <div style="padding: 3%;padding-bottom: 2%">
+                            <div class="faqs-container">
+                                <div style="flex-direction: column;display:flex;padding: 3%">
+                                    <span class="faqs-title">What is Meant by ‘Unwelcome’</span>
+                                    <span class="faqs-desc">Lorem ipsum dolor
+                                        sit amet, consectetur adipiscing elit. Mauris mattis, tortor sit amet tempor
+                                        vehicula, id aliquam lacus odio nec magna.
+                                    </span>
+                                    <span class="faqs-read-more"><a href="../views/explore-faq-topic.html" style="color: rgb(58, 57, 57);">READ
+                                            MORE..</a></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="padding: 3%;padding-bottom: 2%">
+                            <div class="faqs-container">
+                                <div style="flex-direction: column;display:flex;padding: 3%">
+                                    <span class="faqs-title">What is Meant by ‘Unwelcome’</span>
+                                    <span class="faqs-desc">Lorem ipsum dolor
+                                        sit amet, consectetur adipiscing elit. Mauris mattis, tortor sit amet tempor
+                                        vehicula, id aliquam lacus odio nec magna.
+                                    </span>
+                                    <span class="faqs-read-more">READ MORE..</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="padding: 3%;padding-bottom: 2%">
+                            <div class="faqs-container">
+                                <div style="flex-direction: column;display:flex;padding: 3%">
+                                    <span class="faqs-title">What is Meant by ‘Unwelcome’</span>
+                                    <span class="faqs-desc">Lorem ipsum dolor
+                                        sit amet, consectetur adipiscing elit. Mauris mattis, tortor sit amet tempor
+                                        vehicula, id aliquam lacus odio nec magna.
+                                    </span>
+                                    <span class="faqs-read-more">READ MORE..</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="number-container cursor">
+                            <img src="../images/posh-icons-12.png" class="left-icon" alt="" />
+                            <span class="pagination-number">1-3 of 15</span>
+                            <img src="../images/posh-icons-13.png" class="right-image" alt="" />
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="contact-container box-shadow ">
+                    <div class="contact-container-div border-bottom">
+                        <p class="contact-text">CONTACT</p>
+                        <p class="contact-text-desc">Lorem ipsum dolor sit amet,
+                            consectetur.
+                        </p>
+                    </div>
+
+                    <div class="contact-div">
+                        <div style="padding: 2%;padding-bottom: 0%">
+                            <div class="contacts-container">
+                                <div style="display:flex;padding: 2%">
+                                    <img src="../images/profile.png" class="profile-image-contact" style="border-radius: 50%" />
+                                    <div class="contact-detail-container">
+                                        <span class="contact-title">Jeret Quartz</span>
+                                        <span class="contact-designation">Internal Committee - Chairman</span>
+                                        <span class="contact-email">jeret010@gmail.com</span>
+                                        <span class="contact-number">Mobile : 8989898989</span>
+
+                                        <div class="mobile-contact-container enrolled" style="padding-top:1%">
+                                            <img src="../images/mobile/phone-icon.png" width="9%" height="100%" alt="" />
+                                            <img src="../images/mobile/msg-icon.png" width="13%" height="100%" alt=""
+                                                style="padding-left:4%" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="padding: 2%;padding-bottom: 0%">
+                            <div class="contacts-container">
+                                <div style="display:flex;padding: 2%">
+                                    <img src="../images/profile.png" class="profile-image-contact" style="border-radius: 50%" />
+                                    <div class="contact-detail-container">
+                                        <span class="contact-title">Jeret Quartz</span>
+                                        <span class="contact-designation">Internal Committee - Chairman</span>
+                                        <span class="contact-email">jeret010@gmail.com</span>
+                                        <span class="contact-number">Mobile : 8989898989</span>
+
+                                        <div class="mobile-contact-container enrolled" style="padding-top:1%">
+                                            <img src="../images/mobile/phone-icon.png" width="9%" height="100%" alt="" />
+                                            <img src="../images/mobile/msg-icon.png" width="13%" height="100%" alt=""
+                                                style="padding-left:4%" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="padding: 2%;padding-bottom: 0%">
+                            <div class="contacts-container">
+                                <div style="display:flex;padding: 2%">
+                                    <img src="../images/profile.png" class="profile-image-contact" style="border-radius: 50%" />
+                                    <div class="contact-detail-container">
+                                        <span class="contact-title">Jeret Quartz</span>
+                                        <span class="contact-designation">Internal Committee - Chairman</span>
+                                        <span class="contact-email">jeret010@gmail.com</span>
+                                        <span class="contact-number">Mobile : 8989898989</span>
+
+                                        <div class="mobile-contact-container enrolled" style="padding-top:1%">
+                                            <img src="../images/mobile/phone-icon.png" width="9%" height="100%" alt="" />
+                                            <img src="../images/mobile/msg-icon.png" width="13%" height="100%" alt=""
+                                                style="padding-left:4%" />
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="padding: 2%;padding-bottom: 0%" class="show">
+                            <div class="contacts-container">
+                                <div style="display:flex;padding: 2%">
+                                    <img src="../images/profile.png" class="profile-image-contact" style="border-radius: 50%" />
+                                    <div class="contact-detail-container">
+                                        <span class="contact-title">Jeret Quartz</span>
+                                        <span class="contact-designation">Internal Committee - Chairman</span>
+                                        <span class="contact-email">jeret010@gmail.com</span>
+                                        <span class="contact-number">Mobile : 8989898989</span>
+
+                                        <div class="mobile-contact-container enrolled" style="padding-top:1%">
+                                            <img src="../images/mobile/phone-icon.png" width="9%" height="100%" alt="" />
+                                            <img src="../images/mobile/msg-icon.png" width="13%" height="100%" alt=""
+                                                style="padding-left:4%" />
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="clear: both"></div>
+            </div>
+
+            <div class="submit-complaint-container background box-shadow ">
+
+                <div class="complaint-title-container">
+                    <span class="submit-complaint-text">
+                        SUBMIT A COMPLAINT
+                    </span>
+                </div>
+                <div class="complaint-desc-container">
+                    <p class="complaint-desc-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis, tortor sit amet tempor
+                        vehicula, tortor ipsum faucibus
+                        nunc, id aliquam lacus odio nec magna. Cras a ipsum placerat, efficitur nibh sed, iaculis elit.
+                        Mauris
+                        semper tempor facilisis. Nunc at consequat tortor, vel facilisis tortor. Morbi blandit, libero
+                        id
+                        pellentesque faucibus, eros leo consequat erat, a gravida elit enim vitae tellus. Sed mattis
+                        nulla
+                        ut nulla hendrerit porta in quis orci.
+                    </p>
+                    <button class="button-complaint cursor" onclick="window.location.href='../views/complaint-form.html'">
+                        COMPLAINT
+                    </button>
+                </div>
+                <div class="track-your-complaint-div">
+                    <p class="complaint-status-text">You have (1) drafts and (1) registered complaint.</p>
+                    <a href="../views/track-complaint.html" style="color:white">
+                        <span class="track-complaint-text">TRACK YOUR COMPLAINT</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="policy-review-container background box-shadow ">
+                <div class="flex-container-row space-between policy-title-container">
+                    <div style="width: 100%">
+                        <span class="submit-complaint-text">POLICY</span>
+                        <p class="small-text" style="margin-bottom:0%">Last Updated: 7th July 2019</p>
+                    </div>
+                    <div style="width:80%;display: flex;justify-content: flex-end;align-items: center">
+                        <div style="display: flex;flex-direction: column;text-align: right;padding-right: 2%;width: 50%"
+                            class="profile">
+                            <span class="small-text"><b>PDF</b></span>
+                            <span class="small-text">976 KB</span>
+                        </div>
+                        <img src="../images/posh-icons-09.png" class="download-btn" alt="">
+                    </div>
+                </div>
+
+                <div class="policy-desc-container">
+                    <p class="policy-desc-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis, tortor sit amet tempor
+                        vehicula, tortor ipsum faucibus
+                        nunc, id aliquam lacus odio nec magna. Aliquam egestas volutpat nisi ut finibus. Proin
+                        tincidunt
+                        arcu at erat sagittis, non pulvinar sapien placerat. Praesent eu laoreet sem, eu aliquet
+                        lectus.
+                        Aenean auctor sagittis sagittis.
+                    </p>
+                    <br>
+                    <p class="policy-desc-text">
+                        Integer vitae lacus quis nisi elementum porta. Integer sed auctor urna. Morbi ut nibh luctus,
+                        semper
+                        mi at, venenatis nunc.
+                        Aliquam consequat urna vitae est dignissim tincidunt. Duis dignissim consectetur egestas.
+                    </p>
+                    <br>
+                    <p class="policy-desc-text">
+                        Pellentesque lacinia leo massa. Nunc interdum, ante at bibendum posuere, mi lorem porta orci,
+                        vitae
+                        aliquam dolor justo et
+                        nisi. Aliquam mattis luctus condimentum. Donec risus neque, volutpat ac libero sed,
+                        pellentesque
+                        pharetra libero.
+                    </p>
+                    <br>
+                    <p class="policy-desc-text">
+                        Ut sem quam, ultricies at placerat ac, vehicula at diam. Nullam at libero eu ante blandit
+                        sodales
+                        sed vel justo. Donec imperdiet
+                        eros vel diam aliquam mattis. Proin a cursus enim. Integer scelerisque vestibulum nisl, dictum
+                        lacinia
+                        sem. Suspendisse vel justo et enim iaculis bibendum. Pellentesque lacinia leo massa. Nunc
+                        interdum,
+                        ante at bibendum posuere, mi lorem porta orci, vitae aliquam dolor justo et nisi. Aliquam
+                        mattis
+                        luctus condimentum. Donec risus neque, volutpat ac libero sed, pellentesque pharetra libero.
+                    </p>
+                    <br>
+                    <p class="policy-desc-text">
+                        Pellentesque lacinia leo massa. Nunc interdum, ante at bibendum posuere, mi lorem porta orci,
+                        vitae
+                        aliquam dolor justo et
+                        nisi. Aliquam mattis luctus condimentum. Donec risus neque, volutpat ac libero sed,
+                        pellentesque
+                        pharetra libero.
+                    </p>
+                    <br>
+                </div>
+
+                <div class="submit-input-container">
+                    <div style="display: flex; " class="cursor">
+                        <div class="review-search-box background border-top-bottom-right-radius">
+                            <img src="../images/profile.png" alt="" class="image-border review-search-image" style="margin-left:-1%" />
+                            <input class="input-review" id="txt-search-query" type="text" placeholder="please write your review here">
+                        </div>
+                        <button class="button-submit font-size-ten cursor" id="myBtn"><b>SUBMIT</b></button>
+                    </div>
+                </div>
+
+                <div class="reviews-container" id="adding-some-details">
+                    <div class="width-eighty">
+                        <div class="flex-container" style="margin-bottom: 8%;">
+                            <img src="../images/profile.png" class="review-image" style="border-radius: 50%;margin-top:2%" />
+
+                            <div style="margin-left:5%">
+                                <span class="reviewer-name">Raman Goel</span>
+                                <p class="review-date">18 Mar 2019</p>
+                                <p class="review">Lorem ipsum dolor sit amet
+                                    consectetur adipiscing elit sodales primis, mollis viverra conubia
+                                    ligula inceptos laoreet libero tortor.</p>
+
+                                <div class="flex-container-row" style="margin-top:2%">
+                                    <div class="flex-container-row width-count-div">
+                                        <img src="../images/posh-icons-03.png" class="review-icon" alt="" />
+                                        <span class="count-text">13</span>
+                                    </div>
+                                    <div class="flex-container-row">
+                                        <img src="../images/posh-icons-04.png" class="review-icons" alt="" />
+                                        <span class="count-text-first-review">02</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="width-eighty">
+                        <div class="flex-container" style="margin-bottom: 8%;">
+                            <img src="../images/profile.png" class="review-image" style="border-radius: 50%;margin-top:2%" />
+
+                            <div style="margin-left:5%">
+                                <span class="reviewer-name">Raman Raghav</span>
+                                <p class="review-date">08 Mar 2019</p>
+                                <p class="review">Lorem ipsum dolor sit amet
+                                    consectetur adipiscing elit sodales primis, mollis viverra conubia
+                                    ligula inceptos laoreet libero tortor.</p>
+
+                                <div class="flex-container-row" style="margin-top:2%">
+                                    <div class="flex-container-row width-count-div">
+                                        <img src="../images/posh-icons-03.png" class="review-icon" alt="" />
+                                        <span class="count-text">13</span>
+                                    </div>
+                                    <div class="flex-container-row">
+                                        <img src="../images/posh-icons-04.png" class="review-icons" alt="" />
+                                        <span class="count-text-first-review">02</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="background cursor" style="padding:1em;padding-bottom: 4%;">
+                    <div class="show-more-container">
+                        <span class="show-more-txt">SHOW MORE</span>
+                        <img src="../images/posh-icons-18.png" class="showmore-icon" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

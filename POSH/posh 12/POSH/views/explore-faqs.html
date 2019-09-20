@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>POSH - Track Complaint</title>
+    <link rel="stylesheet" type="text/css" href="../css/posh.css">
+    <link rel="stylesheet" type="text/css" href="../css/posh-mobile.css">
+    <link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../ui/posh.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="my_class">
+        <header class="header-container">
+            <div class="header-left-container">
+                <img src="../images/posh-icons-15.png" alt="" class="burger-menu" style="margin-right:5%">
+                <span class="posh-head-title">POSH</span>
+            </div>
+            <div class="header-right-container">
+                <div style="text-align:end;">
+                    <img src="../images/posh-icons-08.png" alt="" height="30%" width="8%" class="notification-icon-header">
+                    <img src="../images/1.png" class="profile-image" alt="" height="18%" width="8%">
+                    <span class="profile-name ">Lucy Carter</span>
+                    <img src="../images/down-arrow-image.png" alt="" class="image-down-icon image-dropdown-icon">
+                </div>
+            </div>
+        </header>
+
+        <div class="content-card">
+            <div class="content-body">
+                <div class="faq-head-container">
+                    <span class="faq-head-title">FAQ/</span>
+                </div>
+                <div class="flex-container-center-column faq-search-spacing">
+                    <div class="faq-search-box cursor">
+                        <input class="input-search" id="txt-search-query" type="text" placeholder="What are you looking for?">
+                        <img src="../images/posh-icons-16.png" class="search-btn" id="btn-search-query" alt="" onclick="topic()">
+                    </div>
+                    <p class="search-result hide">02 results found</p>
+                </div>
+
+
+                <div id="search-hide">
+                    <div class="faq-content-container">
+                        <div class="faq">
+                            <p class="faq-topic-title">What is Meant by ‘Unwelcome’</p>
+                            <p class="faq-topic-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+                                feugiat felis id sem elementum, sit amet sollicitudin leo
+                                vestibulum. Nulla tempus, nisl vitae varius feugiat, enim urna viverra diam,
+                                a consequat tellus ex condimentum urna. Sed vel sapien ac est laoreet elementum. Fusce
+                                condimentum accumsan est, sit amet pretium ante porttitor et.
+                            </p>
+                            <p class="read-more">READ MORE…</p>
+
+                        </div>
+
+                        <div class="faq">
+                            <p class="faq-topic-title">What is Meant by ‘Unwelcome’</p>
+                            <p class="faq-topic-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+                                feugiat felis id sem elementum, sit amet sollicitudin leo
+                                vestibulum. Nulla tempus, nisl vitae varius feugiat, enim urna viverra diam,
+                                a consequat tellus ex condimentum urna. Sed vel sapien ac est laoreet elementum. Fusce
+                                condimentum accumsan est, sit amet pretium ante porttitor et.
+                            </p>
+                            <p class="read-more">READ MORE…</p>
+
+                        </div>
+
+                        <div class="faq">
+                            <p class="faq-topic-title">What is Meant by ‘Unwelcome’</p>
+                            <p class="faq-topic-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+                                feugiat felis id sem elementum, sit amet sollicitudin leo vestibulum. Nulla tempus,
+                                nisl vitae varius feugiat, enim urna viverra diam, a consequat tellus ex condimentum
+                                urna.
+                                Sed vel sapien ac est laoreet elementum. Fusce condimentum accumsan est, sit amet
+                                pretium ante porttitor et.
+                            </p>
+                            <p class="read-more">READ MORE…</p>
+
+                        </div>
+
+                        <div class="faq">
+                            <p class="faq-topic-title">What is Meant by ‘Unwelcome’</p>
+                            <p class="faq-topic-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+                                feugiat felis id sem elementum, sit amet sollicitudin leo vestibulum. Nulla tempus,
+                                nisl vitae varius feugiat, enim urna viverra diam,
+                                a consequat tellus ex condimentum urna. Sed vel sapien ac est laoreet elementum. Fusce
+                                condimentum accumsan est,
+                                sit amet pretium ante porttitor et.
+                            </p>
+                            <p class="read-more">READ MORE…</p>
+
+                        </div>
+                    </div>
+                    <div class="review-container">
+                        <div class="review-submit-container">
+                            <p class="questions-label">If you have question which is beyond this FAQ,
+                                please write to us.</p><br>
+                            <textarea class="review-text-input" style="margin-bottom:2%;width: 90%" rows="6"></textarea><br />
+                            <button class="submit-btn cursor" onclick="document.getElementById('load').style.display='block';">SUBMIT</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="alert-msg-modal" id="success-msg" onclick="document.getElementById('success-msg').style.display='none';">
+                    <div class="alert-modal-body">
+                        <div class="flex-container-row space-between full-width" style="border-bottom: 2px solid #EDEDED;padding:3%;padding-top: 0%;box-shadow:0px 1px 3px rgba(0, 0, 0, 0.14);padding-left:5%;padding-right: 5%;padding-top:5%">
+                            <span class="success-txt">SUCCESS</span>
+                            <img src="../images/close.png" class="close-btn" onclick="document.getElementById('success-msg').style.display='none';">
+                        </div>
+                        <div class="content">
+                            <p class="success-desc-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Mauris mattis, tortor sit amet tempor vehicula, tortor ipsum faucibus nunc, id
+                                aliquam lacus odio nec magna.</p>
+                        </div>
+                        <div class="bottom-content">
+                            <span class="success-txt border-bottom-cancel">CANCEL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert-msg-modal" id="fail-msg">
+                    <div class="alert-modal-body">
+                        <div class="flex-container-row space-between full-width" style="border-bottom: 2px solid #EDEDED;padding:3%;padding-top: 0%;box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.14)">
+                            <span class="success-txt">FAILED</span>
+                            <img src="../images/close.png" class="close-btn" alt="" />
+                        </div>
+                        <div class="content">
+                            <p class="success-desc-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Mauris mattis, tortor sit amet tempor vehicula, tortor ipsum faucibus nunc, id
+                                aliquam lacus odio nec magna.</p>
+                        </div>
+                        <div class="bottom-content">
+                            <span class="success-txt border-bottom-cancel">CANCEL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert-msg-modal" id="load">
+                    <div class="alert-load-body" onclick="document.getElementById('success-msg').style.display='block';document.getElementById('load').style.display='none';">
+                        <img src="../images/posh-icons-05.png" class="loading-image" alt="" />
+                    </div>
+                </div>
+                <div class="result-not-found-container" id="search-show">
+                    <img src="../images/posh-icons-17.png" class="search-image" alt="" />
+                    <p class="no-result-found-text">No Results Found</p>
+                    <p class="search-fail-msg">We can’t find any item matching your search</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

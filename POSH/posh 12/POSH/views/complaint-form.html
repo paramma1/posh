@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>POSH - File a complaint</title>
+    <link rel="stylesheet" type="text/css" href="../css/posh.css">
+    <link rel="stylesheet" type="text/css" href="../css/posh-mobile.css">
+    <script src="../ui/posh.js"></script>
+</head>
+
+<body>
+    <header class="header-container">
+        <div class="header-left-container">
+            <img src="../images/posh-icons-15.png" alt="" class="burger-menu" style="margin-right:5%">
+            <span class="posh-head-title">POSH</span>
+        </div>
+        <div class="header-right-container">
+            <div style="text-align:end;">
+                <img src="../images/posh-icons-08.png" alt="" height="30%" width="8%" class="notification-icon-header">
+                <img src="../images/profile.png" class="profile-image" alt="" height="18%" width="8%">
+                <span class="profile-name ">Lucy Carter</span>
+                <img src="../images/down-arrow-image.png" alt="" class="image-down-icon image-dropdown-icon">
+            </div>
+        </div>
+    </header>
+    <!-- <div class="my_class"> -->
+    <div class="content-card" id="content-card-container">
+        <div class="content-body">
+            <div class="container-body">
+                <div class="left-container">
+                    <div class="flex-container-center-column">
+                        <p class="left-complaint-text">
+                            COMPLAINT</p>
+                        <svg class="help_desc" id="help_desk " data-name="help desk" xmlns="http://www.w3.org/2000/svg"
+                            width="30" viewBox="0 0 104.21 646.62">
+                            <defs>
+                                <style>
+                                    .cls-1 {
+                                        fill: #32bdd2;
+                                    }
+
+                                    .cls-2,
+                                    .cls-3 {
+                                        fill: none;
+                                        stroke: #b8b4b4;
+                                    }
+
+                                    .cls-3 {
+                                        stroke-dasharray: 4;
+                                    }
+
+                                    .text-style {
+                                        font-size: 3vw;
+                                        font-family: 'Roboto Regular';
+                                        fill: #D3D3D3;
+                                    }
+                                    .selected {
+                                        fill: #FFFFFF
+                                    }
+                                </style>
+                            </defs>
+                            <title></title>
+                            <circle class="cls-1 cursor" id="page-1" cx="50.53" cy="72.45" r="43.95"  />
+                            <text id="text-1-web" x="50" y="88" id="page-1-text" text-anchor="middle" class="text-style selected cursor" onclick="circleone()" >1</text>
+                            <text id="text-1-mobile" x="60" y="-32" style="fill:white;font-size:5vh;transform:rotate(90deg);font-family: 'Roboto Regular';"
+                                class="page-1-text-style" onclick="circleone()">1</text>
+                            <circle class="cls-2 cursor" id="page-2" cx="50.02" cy="326.81" r="43.95"  />
+                            <text id="text-2-web" x="50%" y="53%" id="page-2-text" text-anchor="middle" class="text-style cursor" onclick="circletwo()">2</text>
+                            <text id="text-2-mobile" x="320" y="-30" style="fill:#D3D3D3;font-size:5vh;transform:rotate(90deg);font-family: 'Roboto Regular';"
+                                class="page-1-text-style" onclick="circletwo()">2</text>
+                            <path id="Path_1033" data-name="Path 1033" class="cls-3" d="M50.53,116.4V281.17" />
+                            <path id="Path_1034" data-name="Path 1034" class="cls-3" d="M50.53,372.45V537.22" />
+                            <circle class="cls-2 cursor" id="page-3" cx="50.53" cy="582.86" r="43.95"  />
+                            <text id="text-3-web" x="50.53" y="592.86" id="page-3-text" text-anchor="middle" class="text-style cursor" onclick="circlethree()">3</text>
+                            <text id="text-3-mobile" x="578" y="-32" style="fill:#D3D3D3;font-size:5vh;transform:rotate(90deg);font-family: 'Roboto Regular';"
+                                class="page-1-text-style" onclick="circlethree()">3</text>
+                        </svg>
+                    </div>
+                </div>
+                <div class="right-container">
+                    <div class="form " id="form-1">
+                        <div class="complainant">
+                            <span class="form-title">COMPLAINANT</span>
+                            <div class="field-error-container" style="width:40%;padding: 1%;">
+                                <img src="../images/posh-icons-20.png" alt="" class="alert-icon">
+                                <span class="field-error-text" style="font-size:1.2vw">Fill all the details.</span>
+                            </div>
+
+                            <div class="input-field-container">
+                                <span class="input-label">FULL NAME</span>
+                                <input type="text" class="input-text">
+                                <div class="field-error-container">
+                                    <img src="../images/posh-icons-20.png" alt="" class="alert-icon">
+                                    <span class="field-error-text">This field is required</span>
+                                </div>
+                            </div>
+
+                            <div class="input-field-container">
+                                <span class="input-label">ADDRESS</span>
+                                <textarea class="input-text" rows="3"></textarea>
+                                <div class="field-error-container">
+                                    <img src="../images/posh-icons-20.png" alt="" class="alert-icon">
+                                    <span class="field-error-text">This field is required</span>
+                                </div>
+                            </div>
+
+                            <div class="input-field-container">
+                                <span class="input-label">MOBILE</span>
+                                <input type="text" class="input-text" style="width:100%">
+                                <div class="field-error-container" style="width:100%">
+                                    <img src="../images/posh-icons-20.png" alt="" class="alert-icon">
+                                    <span class="field-error-text">This field is required</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="respondent">
+                            <span class="form-title">RESPONDENT</span>
+
+                            <div class="input-field-container">
+                                <span class="input-label">FULL NAME</span>
+                                <input type="text" class="input-text">
+                                <div class="field-error-container">
+                                    <img src="../images/posh-icons-20.png" alt="" class="alert-icon">
+                                    <span class="field-error-text">This field is required</span>
+                                </div>
+                            </div>
+
+                            <div class="input-field-container">
+                                <span class="input-label">ADDRESS</span>
+                                <textarea class="input-text" rows="3"></textarea>
+                                <div class="field-error-container">
+                                    <img src="../images/posh-icons-20.png" alt="" class="alert-icon">
+                                    <span class="field-error-text">This field is required</span>
+                                </div>
+                            </div>
+
+                            <div class="input-field-container">
+                                <span class="input-label">MOBILE</span>
+                                <input type="text" class="input-text" style="width:100%">
+                                <div class="field-error-container" style="width:100%">
+                                    <img src="../images/posh-icons-20.png" alt="" class="alert-icon">
+                                    <span class="field-error-text">This field is required</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="buttons-container">
+                            <span onclick="savedraft()" class="save-draft-text cursor">SAVE DRAFT</span>
+                            <div class="flex-container-row add-charge-buttons-container">
+                                <div class="next-button-content  next-button-container cursor" onclick="next()">
+                                    <span class="next-button">NEXT</span>
+                                    <img src="../images/posh-icons-25.png" alt="" class="next-icon">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form hide" id="form-2">
+                        <div class="preview">
+                            <span class="form-title">CHARGES</span>
+                            <p class="form-title-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Mauris
+                                mattis, tortor sit amet tempor vehicula.</p>
+                        </div>
+
+                        <div class="flex-container-center-row add-charge-box">
+                            <img onclick="addchargealert()" src="../images/posh-icons-23.png" alt="" class="add-charge-btn cursor">
+                            <span class="add-charge-txt">ADD CHARGE</span>
+                        </div>
+
+                        <div class="what-is-charge-box">
+                            <span class="what-is-charge-txt cursor">What
+                                is a charge?</span>
+
+                            <div class="what-is-charge-desc">
+                                <svg id="help_desk" class="clip-path-rectangle" data-name="help desk" xmlns="http://www.w3.org/2000/svg"
+                                    width="50%" height="50%" viewBox="0 0 486.95 148.11">
+                                    <defs>
+                                        <style>
+                                            .cls-1-charge {
+                                                    fill: #fff;
+                                                }
+                                            .cls-1{
+                                                stroke: #b8b4b4;
+                                                fill:#32bdd2;
+                                            }
+                                                .cls-2-charge {
+                                                    fill: #b5b5b5;
+                                                }
+
+                                                .cls-3-charge {
+                                                    fill: none;
+                                                    stroke: #b8b4b4;
+                                                    stroke-miterlimit: 10;
+                                                    display: none;
+                                                }
+                                            </style>
+                                    </defs>
+                                    <title>posh-icons</title>
+                                    <g id="Path_1057-2" data-name="Path 1057-2">
+                                        <path class="cls-1-charge" d="M482.47,134.71H4V9.21H240.16l.07-.06,7-5.87,6.53,5.87.08.06H482.47Z" />
+                                        <path class="cls-2-charge" d="M247.24,3.61l-6.85,5.74-.14.11H4.22v105h478V9.46H253.75l-.14-.13-6.37-5.72m0-.66,6.69,6H482.72V115H3.72V9H240.07Z" />
+                                    </g>
+                                    <rect class="cls-3-charge" x="11.55" y="15.19" width="463.66" height="122.17" />
+                                    <foreignObject x="12" y="15.50" height="100%" width="95%">
+                                        <p xmlns="http://www.w3.org/1999/xhtml" class="svg-clip-path-rectangle-text">
+                                            Lorem ipsum dolor sit amet, consectetur
+                                            adipiscing elit. Mauris mattis, tortor sit amet tempor vehicula, tortor
+                                            ipsum
+                                            faucibus nunc, id aliquam lacus odio nec magna. Cras a ipsum placerat,
+                                            efficitur
+                                            nibh sed, iaculis elit. Mauris semper tempor facilisis. Nunc at
+                                            consequat
+                                            tortor, vel facilisis tortor. Morbi blandit, libero id pellentesque
+                                            faucibus,
+                                            eros leo consequat erat, a gravida elit enim vitae tellus.</p>
+                                    </foreignObject>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="charges-list">
+                            <div class="flex-container-justify-between-row charges-row-title">
+                                <div class="align-self-center;" style="display:flex;flex-direction:row;align-items:center;">
+                                    <img class="down-arrow-image" src="../images/down-arrow-image.png" alt="" style="margin-right:2%;">
+                                    <img class="upward-arrow-image" src="../images/upward-icon.png" alt="">
+                                    <div class="charge-one-container">
+                                        <span class="charge-title">CHARGE
+                                            01</span>
+                                        <span class="charge-title charge-title-text">(26th May
+                                            2018)</span>
+                                    </div>
+                                </div>
+                                <div style="text-align: end">
+                                    <img onclick="deleteyesorno()" src="../images/posh-icons-36.png" alt="" class="charge-delete-btn cursor">
+                                </div>
+                            </div>
+
+                            <div class="edit-charge-box">
+                                <div class="edit-charge-container">
+                                    <p class="edit-charge-desc">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis,
+                                        tortor
+                                        sit
+                                        amet tempor vehicula, tortor ipsum faucibus nunc, id aliquam lacus odio nec
+                                        magna.
+                                        Cras a ipsum placerat, efficitur nibh sed, iaculis elit. Mauris semper
+                                        tempor
+                                        facilisis. Nunc at consequat tortor, vel facilisis tortor.
+                                    </p>
+                                </div>
+                                <!-- <img src="../images/posh-icons-21.png" alt="" class="edit-charge-btn"> -->
+                                <img src="../images/edit-button.png" alt="" class="edit-charge-btn">
+                            </div>
+                            <div class="witness-evidence-add-container">
+                                <div class="evidence-preview">
+                                    <span class="evidence-txt" style="background:#F3F5B3">EVIDENCE</span>
+                                    <div class="evidence-container" style="border:1px solid #F3F5B3;width:100%;background: rgba(243, 245, 179, 0.31);padding: 3%">
+
+                                        <p class="desc-txt">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis,
+                                            tortor sit amet tempor vehicula, tortor ipsum faucibus nunc, id aliquam
+                                            lacus odio nec magna.</p>
+                                        <!-- attachment -->
+                                        <div class="flex-container attach-file-web-container">
+                                            <div class="attach-left-container" id="attach-file-web-container">
+                                                <div class="select-file-container" style="height:85%;">
+                                                    <p class="select-file">
+                                                        Select a file from my
+                                                        computer.</p>
+                                                    <p class="select-file-desc">
+                                                        Maximum file size upto
+                                                        5MB is allowed,
+                                                        preferably PDF
+                                                        or MS
+                                                        word document.</p>
+                                                    <!-- <br> -->
+                                                    <div class="browse-top-spacing">
+                                                        <div class="flex-container-row align-items-center">
+                                                            <div style="margin-right:6%">
+                                                                <span class="browse-btn white-color browse-text cursor"
+                                                                    id="browse_file">
+                                                                    BROWSE
+                                                                </span>
+                                                            </div>
+
+                                                            <div class="flex-container-row">
+                                                                <span id="file_name" class="select-file spacing" style="display:none;"></span>
+                                                                <img src="../images/close.png" width="8%" height="40%"
+                                                                    alt="" style="margin-left:5%" class="hide remove-attachment"
+                                                                    id="remove-attachment">
+                                                            </div>
+                                                            <input type="file" id="attachments" accept=".DOC|.txt|.pdf|.ODT|.odt|.doc|.docx|.TXT"
+                                                                style="display:none">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="attach-right-container" id="drop-container">
+                                                <div class="drop-file-container " id="drop-file-container" style="height:85%;">
+                                                    <div class="drop-file-dashed-container full-height" id="file"
+                                                        ondrop="dragDrop(event)" ondragover="allowDrop(event)">
+                                                        <div class="flex-container-center-row">
+                                                            <span class="hide" id="file-name"></span>
+                                                            <img src="../images/close.png" width="8%" height="15%" alt=""
+                                                                class="hide remove-attachment" id="remove-drop-attachment">
+                                                        </div>
+                                                        <div class="flex-container-center-column" id="dropdown-container"
+                                                            style="padding-bottom: 6%;">
+                                                            <img alt="Drop file" src="../images/upload.png" class="drop-file-size">
+                                                            <p class="white-color drop-file-text">Drop a file here</p>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="add-container">
+                                            <img src="../images/posh-icons-diff-size/1x/Artboard1copy36.png" alt=""
+                                                class="attach-files-pin-icon">
+                                            <span class="add-witness-txt">ATTACH FILES
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div style="border:1px solid #F3F5B3">
+                                        <div class="evidence-files-container" style="border-bottom:1px solid rgba(243, 245, 179, 0.31)">
+                                            <span class="file-name" style="text-align:left">image0037429023.png</span>
+                                            <span class="file-size" style="text-align:center">976 KB</span>
+                                            <img onclick="deleteyesorno()" src="../images/posh-icons-22.png" alt=""
+                                                class="delete-evidence-btn cursor">
+                                        </div>
+
+                                        <div class="evidence-files-container">
+                                            <span class="file-name" style="text-align:left">image0037429023.png</span>
+                                            <span class="file-size" style="text-align:center">976 KB</span>
+                                            <img onclick="deleteyesorno()" src="../images/posh-icons-22.png" alt=""
+                                                class="delete-evidence-btn cursor">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="witness-preview">
+                                    <span class="evidence-txt" style="background:#F3F5B3">WITNESS</span>
+                                    <div class="evidence-container" style="border:1px solid #F3F5B3;width:100%;background: rgba(243, 245, 179, 0.31);padding: 3%">
+                                        <p class="desc-txt">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis,
+                                            tortor sit amet tempor vehicula, tortor ipsum faucibus nunc, id aliquam
+                                            lacus odio nec magna.</p>
+
+                                        <div style="display:flex;align-items:center">
+                                            <img onclick="witnessformdetails()" src="../images/posh-icons-23.png" alt=""
+                                                class="add-witness-btn cursor">
+                                            <span class="add-witness-txt">ADD</span>
+                                        </div>
+                                    </div>
+
+                                    <div style="border:1px solid #F3F5B3">
+                                        <div class="witness-container flex-container-justify-between-row" style="flex-direction: row">
+                                            <div style="display:flex;flex-direction:column">
+                                                <span class="witness-details-text">Satish Kumar Chauhan</span>
+                                                <span class="witness-details-text">satish.kumar@airtel.in</span>
+                                                <span class="witness-details-text">+91 98456 45823</span>
+                                            </div>
+
+                                            <div style="display:flex;align-items:center;justify-content: flex-end">
+                                                <img onclick="witnesseditalert()" src="../images/posh-icons-21.png"
+                                                    class="edit-witness-btn cursor" alt="">
+                                                <img onclick="deleteyesorno()" src="../images/posh-icons-22.png" class="edit-witness-btn cursor"
+                                                    alt="">
+                                            </div>
+                                            <img class="artboard-image" src="../images/posh-icons-diff-size/1x/Artboard1copy38.png"
+                                                alt="">
+                                        </div>
+
+                                        <div class="witness-container flex-container-justify-between-row" style="flex-direction: row">
+                                            <div style="display:flex;flex-direction:column">
+                                                <span class="witness-details-text">Anita Seth</span>
+                                                <span class="witness-details-text">anitha.seth@airtel.in</span>
+                                                <span class="witness-details-text">+91 84379 58314</span>
+                                            </div>
+                                            <div style="display:flex;align-items:center;justify-content: flex-end">
+                                                <img onclick="witnesseditalert()" src="../images/posh-icons-21.png"
+                                                    class="edit-witness-btn cursor" alt="">
+                                                <img onclick="deleteyesorno()" src="../images/posh-icons-22.png" class="edit-witness-btn cursor"
+                                                    alt="">
+                                            </div>
+                                            <img class="artboard-image" src="../images/Artboard1copy38.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex-container-justify-between-row charges-container" style="background:#F0F0F0;border:1px solid #F0F0F0;padding: 2%;margin-bottom: 10%;">
+                            <div style="align-self: center;display: flex;align-items: center;">
+                                <img class="down-arrow-image" src="../images/down-arrow-image.png" alt="" width="3%"
+                                    height="3%" style="margin-right:2%;">
+                                <span class="charge-title">CHARGE
+                                    02</span>
+                                <span class="charge-title">(26th May
+                                    2018)</span>
+                            </div>
+                            <div style="display: flex;align-items: center;justify-content: flex-end">
+                                <div class="charge-error-box">
+                                    <img src="../images/posh-icons-20.png" class="charge-error-icon" alt="">
+                                    <p class="charge-error-txt">This
+                                        charge is older than 90 days</p>
+                                </div>
+                                <img class="charge-2-icon" src="../images/posh-icons-24.png" alt="">
+                            </div>
+                        </div>
+                        <div class="flex-container-justify-between-row charges-row-title charges-container-2">
+                            <div class="align-self-center">
+                                <img class="down-arrow-image" src="../images/down-arrow-image.png" alt="" width="8%"
+                                    height="5%" style="margin-right:2%;margin-top:5%;display: block">
+                                <div class="charge-one-container">
+                                    <span class="charge-title">CHARGE
+                                        01</span>
+                                    <span class="charge-title charge-title-text">(26th May
+                                        2018)</span>
+                                    <div style="width:80%;background: #FFFFFF;border-radius: 15px;display: flex;flex-direction: row;align-items: center;justify-content: center;padding: 2%;">
+                                        <img class="preview-error-icon" src="../images/posh-icons-20.png" alt="">
+                                        <p class="ack-charge-error-txt">This
+                                            charge is older than 90 days</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="text-align: end">
+                                <img src="../images/posh-icons-36.png" alt="" style="min-width: 70%;min-height: 50%;"
+                                    class="charge-delete-btn" onclick="deleteyesorno()">
+                            </div>
+                        </div>
+
+                        <div class="buttons-container">
+                            <span onclick="savedraftas()" class="save-draft-text cursor">SAVE DRAFT</span>
+                            <div class="flex-container-row add-charge-buttons-container">
+
+                                <span onclick="backformone()" class="back-button cursor">BACK</span>
+
+                                <div class="next-button-content next-button-container cursor" onclick="nextform()">
+                                    <span class="next-button">NEXT</span>
+                                    <img src="../images/posh-icons-25.png" alt="" class="next-icon">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form hide" id="form-3">
+                        <div class="preview">
+                            <span class="form-title">PREVIEW</span>
+                            <p class="form-title-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+                                mattis, tortor sit amet tempor vehicula.</p>
+                        </div>
+
+                        <div class="complainant-preview">
+                            <span class="complainant-preview-title">COMPLAINANT</span>
+                            <span class="complainant-name">Preeti Agrawal</span>
+                            <p class="complainant-address">#804, B Block, Sushant Lok, Phase-1, Gurgaon, Haryana, India
+                                - 122002 </p>
+                            <span class="complainant-number">+91 8884535672</span>
+                        </div>
+                        <div class="respondent-preview">
+                            <span class="complainant-preview-title">RESPONDENT</span>
+                            <span class="complainant-name">Nishant Kumar Verma</span>
+                            <p class="complainant-address">#1093, 16th C Main, Jadera Halli, Race Course Road,
+                                Bangalore, Karnataka, India - 560078 </p>
+                        </div>
+
+                        <div class="charges-preview">
+                            <span class="complainant-preview-title">CHARGES</span>
+                            <div class="charges">
+                                <span class="charges-num">01/</span>
+                                <span class="charges-date">(26th May 2018)</span>
+                                <p class="charges-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+                                    mattis, tortor sit amet
+                                    tempor vehicula, tortor ipsum faucibus nunc, id aliquam lacus odio nec magna. Cras
+                                    a
+                                    ipsum placerat, efficitur nibh sed, iaculis elit. Mauris semper tempor facilisis.
+                                    Nunc
+                                    at consequat tortor, vel facilisis tortor. Morbi blandit, libero id pellentesque
+                                    faucibus, eros leo consequat erat, a gravida elit enim vitae tellus. Sed mattis
+                                    nulla ut
+                                    nulla hendrerit porta in quis orci.</p>
+
+                                <div class="witness-evidence-preview-container">
+                                    <div class="evidence-preview">
+                                        <span class="evidence-txt">EVIDENCE</span>
+                                        <div class="evidence-container">
+                                            <div class="evidence-files-container">
+                                                <span class="file-name">image0037429023.png</span>
+                                                <span class="file-size">976 KB</span>
+                                            </div>
+
+                                            <div class="evidence-files-container">
+                                                <span class="file-name">image0037429023.png</span>
+                                                <span class="file-size">976 KB</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="witness-preview">
+                                        <span class="evidence-txt">WITNESS</span>
+                                        <div class="evidence-container">
+                                            <div class="witness-container">
+                                                <span class="witness-details-name">Satish Kumar Chauhan</span>
+                                                <span class="witness-details-text">satish.kumar@airtel.in</span>
+                                                <span class="witness-details-text">+91 98456 45823</span>
+                                            </div>
+
+                                            <div class="witness-container">
+                                                <span class="witness-details-name">Anita Seth</span>
+                                                <span class="witness-details-text">anitha.seth@airtel.in</span>
+                                                <span class="witness-details-text">+91 84379 58314</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="charges">
+                                <span class="charges-num">02/</span>
+                                <span class="charges-date">(26th May 2018)</span>
+
+                                <div class="ack-charge-error-box">
+                                    <img class="preview-error-icon" src="../images/posh-icons-20.png" alt="">
+                                    <p class="ack-charge-error-txt">This
+                                        charge is older than 90 days</p>
+                                </div>
+
+                                <p class="charges-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+                                    mattis, tortor sit amet
+                                    tempor vehicula, tortor ipsum faucibus nunc, id aliquam lacus odio nec magna. Cras
+                                    a
+                                    ipsum placerat, efficitur nibh sed, iaculis elit. Mauris semper tempor facilisis.
+                                    Nunc
+                                    at consequat tortor, vel facilisis tortor. Morbi blandit, libero id pellentesque
+                                    faucibus, eros leo consequat erat, a gravida elit enim vitae tellus. Sed mattis
+                                    nulla ut
+                                    nulla hendrerit porta in quis orci.</p>
+                            </div>
+                        </div>
+
+                        <!-- <div class="buttons-container">
+                            <span class="save-draft-text">SAVE DRAFT</span>
+                            <div class="flex-container-row buttons">
+                                <span class="back-button hide">BACK</span>
+                                <button class="complaint-submit-button">SUBMIT</button>
+                            </div>
+                        </div> -->
+                        <div class="buttons-container container-submit-btn">
+                            <span onclick="savedraftasform3()" class="save-draft-text cursor">SAVE DRAFT</span>
+                            <div class="flex-container-row add-charge-buttons-container">
+
+                                <span onclick="backformtwo()" class="back-button cursor">BACK</span>
+
+                                <div class="submit-button-content next-button-container cursor" onclick="submit()">
+                                    <span class="next-button">SUBMIT</span>
+                                    <!-- <img src="../images/posh-icons-25.png" alt="" class="next-icon"> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form hide" id="acknowledgement">
+                        <div class="acknowledge">
+                            <span class="form-title txt-color">ACKNOWLEDGEMENT</span>
+                        </div>
+
+                        <div class="acknowledge-desc">
+                            <p class="complaint-acknowledge-txt">Your
+                                complaint has been registered.</p>
+                            <p class="complaint-acknowledge-desc">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis, tortor sit amet
+                                tempor vehicula, tortor ipsum faucibus nunc, id aliquam lacus odio nec magna. Cras a
+                                ipsum placerat, efficitur nibh sed, iaculis elit. Mauris semper tempor facilisis.</p>
+
+                            <span class="print-complaint cursor">Print Complaint</span>
+                            <span class="download-pdf cursor">Download PDF</span>
+                        </div>
+                    </div>
+
+                    <!--delete-form-container  -->
+
+                    <div id="delete-alert">
+                        <!-- <div class="delete-dialog-modal-body"> -->
+                        <div class="delete-form-body">
+                            <div class="delete-form-body-container">
+                                <div class="flex-container-row modal-head">
+                                    <p class="head-title-text">
+                                        DELETE
+                                    </p>
+                                    <img onclick="deletealertcalcel()" class="close-btn" src="../images/close.png" alt="cancel-image"
+                                        style="margin-right:5%">
+                                </div>
+
+                                <div class="flex-container-center-column full-width delete-body">
+                                    <p class="delete-confirm-txt">
+                                        Are
+                                        you sure, you
+                                        want to delete?</p>
+
+                                    <div style="justify-content: space-around;width: 50%;" class="flex-container-row">
+                                        <button onclick="deleteifyes()" class="yes-button"><span class="yes-data">Yes</span></button>
+                                        <button onclick="nodelete()" class="no-button"><span class="yes-data">No</span></button>
+                                    </div>
+
+                                </div>
+                                <!-- </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <!--delete-form-container  -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- </div> -->
+
+    <!-- witness add charge form -->
+    <div id="witness-form-overlay">
+        <div class="witness-form-body">
+            <div class="witness-form-body-container">
+
+                <div style="padding-bottom:4%;background-color:#FCFCFC;border-radius:35px 35px 0px 0px;">
+                    <div class="witness-header-container">
+                        <p class="witness-txt">WITNESS
+                        </p>
+                        <img class="cancel-icon-image" onclick="witnessdetailsalert()" src="../images/close.png" style="width:3%;height:5%;margin-right:5%;"
+                            alt="cancel-image">
+                    </div>
+                </div>
+                <div class="witness-input-details-container">
+                    <!-- witness form error message -->
+                    <div id="witness-fill-all-the-details">
+                        <div style="padding-bottom:1.5%;display: none">
+                            <div style="border:0px;width:50%;background-color:#FFD9D0;padding-top:1.2%;padding-bottom: 1.2%;padding-left:2%;"
+                                class="flex-container-row align-items-center">
+                                <img class="complaint-error-icon-image" src="../posh-icons/error-icon-posh-image.png"
+                                    alt="error-icon">
+                                <div style="padding-left:3%;">
+                                    <p style="width:10em;color: #7E2318;font-weight:400;color:#772309;font-family:'Lato Regular';">Fill
+                                        all the
+                                        details.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding-bottom:2%;" class="line-spacing">
+                        <p class="witness-full-name-txt">FULL
+                            NAME
+                        </p>
+                        <input class="input-full-name" type="text" placeholder="Kumar Chauhan">
+
+                    </div>
+                    <div style="padding-bottom:2%;" class="line-spacing">
+                        <p class="witness-email-txt">EMAIL
+                        </p>
+                        <input class="input-email" type="text" placeholder="satish.kumar@airtel.in">
+                    </div>
+                    <div style="padding-bottom:5%;" class="line-spacing">
+                        <p class="mobile-txt">MOBILE
+                        </p>
+                        <input class="input-mobile-number" type="text" placeholder="+91 9845645823">
+                    </div>
+                </div>
+                <div class="witness-forms-footer">
+                    <span class="show" onclick="witnessdetailsalert()" style="font-size:1.2vw;color:#5A5A5A;margin-left: 5%;padding-bottom:0.5%;font-weight:600;border-bottom:2px solid #5A5A5A; font-family: 'Lato Regular';">CANCEL
+                    </span>
+                    <div style="margin-right:8%;">
+                        <button class="witness-form-save-button" onclick="cancelwitness()">SAVE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- witness add charge form -->
+
+    <!-- witness add charge form input details -->
+    <div id="witness-alert">
+        <div class="witness-form-body">
+            <div class="witness-form-body-container">
+
+                <div class="witness-header-content">
+                    <div class="witness-header-container">
+                        <p class="witness-txt">WITNESS
+                        </p>
+                        <img onclick="witnessalertcancel()" class="cancel-icon-image" src="../images/close.png" style="width:4%;height:5%;margin-right:5%;"
+                            alt="cancel-image">
+                    </div>
+                </div>
+                <div class="witness-input-details-container">
+                    <!-- witness form error message -->
+                    <div id="witness-fill-all-the-details">
+                        <div style="padding-bottom:1.5%;display: none;">
+                            <div style="border:0px;width:50%;background-color:#FFD9D0;padding-top:1.2%;padding-bottom: 1.2%;padding-left:2%;"
+                                class="flex-container-row align-items-center">
+                                <img class="complaint-error-icon-image" src="../images/posh-icons-20.png" alt="error-icon">
+                                <div style="padding-left:3%;">
+                                    <p style="width:10em;color: #7E2318;font-weight:400;color:#772309;font-family:'Lato Regular';">Fill
+                                        all the
+                                        details.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding-bottom:2%;" class="line-spacing">
+                        <p class="witness-full-name-txt">FULL
+                            NAME
+                        </p>
+                        <input class="input-full-name" type="text">
+                        <div class="witness-error-message-container flex-container-row align-items-center">
+                            <img class="complaint-error-icon-image" src="../images/posh-icons-20.png" alt="error-icon">
+                            <div style="padding-left:3%;">
+                                <p style="width:10em;color: #7E2318;font-weight:400;font-size: 1.2vh;font-family: 'Lato Regular';">This
+                                    field is required
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding-bottom:2%;" class="line-spacing">
+                        <p class="witness-email-txt">EMAIL
+                        </p>
+                        <input class="input-email" type="text">
+                        <div class="witness-error-message-container flex-container-row align-items-center">
+                            <img class="complaint-error-icon-image" src="../images/posh-icons-20.png" alt="error-icon">
+                            <div style="padding-left:3%;">
+                                <p style="width:10em;color: #7E2318;font-weight:400;font-size: 1.2vh;font-family: 'Lato Regular';">This
+                                    field is required
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding-bottom:5%;" class="line-spacing">
+                        <p class="mobile-txt">MOBILE
+                        </p>
+                        <input class="input-mobile-number" type="text">
+                        <div class="witness-error-message-container flex-container-row align-items-center">
+                            <img class="complaint-error-icon-image" src="../images/posh-icons-20.png" alt="error-icon">
+                            <div style="padding-left:3%;">
+                                <p style="width:10em;color: #7E2318;font-weight:400;font-size: 1.2vh;font-family: 'Lato Regular';">This
+                                    field is required
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="witness-forms-footer">
+                    <span class="show" onclick="witnessalertcancel()" style="font-size:1.2vw;color:#5A5A5A;margin-left: 5%;border-bottom:2px solid #5A5A5A;padding-bottom:0.5%;font-weight:600;font-family: 'Lato Bold';">CANCEL
+                    </span>
+                    <div style="margin-right:8%;">
+                        <button class="witness-form-save-button" onclick="cancelwitness()">SAVE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- witness add charge form -->
+
+    <!-- <div class="modal-container"> -->
+    <!-- <div class="add-charge-dialog-modal-body"> -->
+    <div id="add-charge-alert">
+        <div class="witness-form-body">
+            <div class="witness-form-body-container">
+                <!-- <div style="background:#FCFCFC"> -->
+                <div class="witness-header-container">
+                    <p class="witness-txt">CHARGE
+                    </p>
+                    <img onclick="addchargealertcancel()" src="../images/close.png" style="width:4%;height:5%;margin-right:5%;"
+                        alt="cancel-image">
+                    <!-- </div> -->
+                </div>
+                <div style="padding-left:5%;padding-top:3%;">
+                    <div style="padding-bottom:2%;">
+                        <div style="border:0px;width:50%;background-color:#FFD9D0;padding-top:1.2%;padding-bottom: 1.2%;padding-left:2%;display: none;"
+                            class="flex-container-row align-items-center">
+                            <img class="complaint-error-icon-image" src="../posh-icons/error-icon-posh-image.png" alt="error-icon">
+                            <div style="padding-left:3%;">
+                                <p style="width:10em;color: #7E2318;font-weight:400;font-family: 'Lato Regular';">Fill
+                                    all the details.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-container-row line-spacing" style="padding-bottom:3%;">
+                        <div style="padding-right:1%;">
+                            <input class="charge-form-input-date" type="text" placeholder="Date...">
+                        </div>
+                        <div class="charge-calender-format">
+                            <span style=" height: 5px;
+                                            width: 6px;
+                                            background-color: #B5B5B5;
+                                            border-radius: 50%;
+                                            display: inline-block;"></span>
+                            <span style=" height: 5px;
+                                            width: 6px;
+                                            background-color: #B5B5B5;
+                                            border-radius: 50%;
+                                            display: inline-block;"></span>
+                            <span style=" height: 5px;
+                                            width: 6px;
+                                            background-color: #B5B5B5;
+                                            border-radius: 50%;
+                                            display: inline-block;"></span>
+                        </div>
+                    </div>
+                    <div class="line-spacing" style="padding-bottom:4%;margin-right: 6%;">
+                        <textarea class="please-write-the-charge">Please write the charge here...   
+                                                 </textarea>
+                    </div>
+                </div>
+                <div class="charge-forms-footer">
+                    <span onclick="addchargealertcancel()" class="show" style="font-size:1.2vw;color:#5A5A5A;margin-left: 5%;border-bottom:2px solid #5A5A5A;padding-bottom:0.5%;font-family: 'Lato Bold';">CANCEL
+                    </span>
+                    <div style="margin-right:10%;">
+                        <button class="cursor witness-form-save-button" onclick="cancelcharge()">SAVE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- </div> -->
+    <!-- </div> -->
+
+    <div class="modal-container">
+        <div class="add-charge-dialog-modal-body">
+            <div class="flex-container-row full-width modal-head-charge">
+                <span class="success-txt">SUCCESSS</span>
+                <img src="../images/close.png" class="close-btn" alt="" onclick="document.getElementById('success-msg').style.display='none';">
+            </div>
+            <div class="content">
+                <p class="success-desc-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Mauris mattis, tortor sit amet tempor vehicula, tortor ipsum faucibus nunc, id
+                    aliquam lacus odio nec magna.</p>
+            </div>
+            <div class="bottom-content" style="display:flex;align-items:center;justify-content:space-between">
+                <span class="success-txt border-bottom-cancel">CANCEL</span>
+                <button class="no-button">SAVE</button>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
